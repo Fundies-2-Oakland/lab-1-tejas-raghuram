@@ -1,6 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        // Question 1
+        Vector3D vector = new Vector3D(1, 2, 3);
+
+        // Question 2
+        System.out.println(vector.getX() + " " + vector.getY() + " " + vector.getZ());
+
+        // Question 3
+        System.out.println(vector);
     }
 }
 
@@ -28,6 +35,10 @@ class Vector3D {
     // Question 2
     public double getZ() {
         return z;
+    }
+
+    public String toString() {
+        return String.format("(%.2f, %.2f, %.2f)", x, y, z);
     }
 
 }
