@@ -14,6 +14,9 @@ public class Main {
 
         // Question 5
         System.out.println(vector.normalize());
+
+        // Question 6
+        System.out.println(vector.add(vector));
     }
 }
 
@@ -55,6 +58,11 @@ class Vector3D {
         } else {
             return new Vector3D(x / getMagnitude(), y / getMagnitude(), z / getMagnitude());
         }
+    }
+
+    // Question 6
+    public Vector3D add(Vector3D other) {
+        return new Vector3D(x + other.getX(), y + other.getY(), z + other.getZ());
     }
 
     // Question 3
