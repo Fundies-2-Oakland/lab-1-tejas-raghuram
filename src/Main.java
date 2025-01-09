@@ -1,3 +1,5 @@
+import java.util.Vector;
+
 public class Main {
     public static void main(String[] args) {
         // Question 1
@@ -26,6 +28,9 @@ public class Main {
 
         // Question 9
         System.out.println(vector.angleBetween(new Vector3D(4, 5, 6)));
+
+        // Question 10
+        System.out.println(vector.crossProduct(new Vector3D(4, 5, 6)));
     }
 }
 
@@ -89,8 +94,21 @@ class Vector3D {
         if (getMagnitude() == 0 || other.getMagnitude() == 0) {
             throw new IllegalStateException();
         } else {
-            return Math.toDegrees(Math.acos(dotProduct(other) / (getMagnitude() * other.getMagnitude())));
+            return Math.toDegrees(
+                Math.acos(
+                    dotProduct(other) / (getMagnitude() * other.getMagnitude())
+                )
+            );
         }
+    }
+
+    // Question 10
+    public Vector3D crossProduct(Vector3D other) {
+        return new Vector3D(
+            y * other.getZ() - z * other.getY(),
+            z * other.getX() - x * other.getZ(),
+            x * other.getY() - y * other.getX()
+        );
     }
 
     // Question 3
