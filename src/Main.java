@@ -15,4 +15,19 @@ class Vector3D {
         this.z = z;
     }
 
+    // Question 2
+    public double getX() {
+        return x;
+    }
+
+    // Question 2
+    public double getY() {
+        return y;
+    }
+
+    // Question 2
+    public double getZ() {
+        return z;
+    }
+
 }
