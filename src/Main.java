@@ -20,6 +20,9 @@ public class Main {
 
         // Question 7
         System.out.println(vector.multiply(2));
+
+        // Question 8
+        System.out.println(vector.dotProduct(vector));
     }
 }
 
@@ -71,6 +74,11 @@ class Vector3D {
     // Question 7
     public Vector3D multiply(double scalar) {
         return new Vector3D(x * scalar, y * scalar, z * scalar);
+    }
+
+    // Question 8
+    public double dotProduct(Vector3D other) {
+        return x * other.getX() + y * other.getY() + z * other.getZ();
     }
 
     // Question 3
