@@ -8,6 +8,9 @@ public class Main {
 
         // Question 3
         System.out.println(vector);
+
+        // Question 4
+        System.out.println(vector.getMagnitude());
     }
 }
 
@@ -37,6 +40,12 @@ class Vector3D {
         return z;
     }
 
+    // Question 4
+    public double getMagnitude() {
+        return Math.sqrt(x * x + y * y + z * z);
+    }
+
+    // Question 3
     public String toString() {
         return String.format("(%.2f, %.2f, %.2f)", x, y, z);
     }
