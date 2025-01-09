@@ -23,6 +23,9 @@ public class Main {
 
         // Question 8
         System.out.println(vector.dotProduct(vector));
+
+        // Question 9
+        System.out.println(vector.angleBetween(new Vector3D(4, 5, 6)));
     }
 }
 
@@ -79,6 +82,15 @@ class Vector3D {
     // Question 8
     public double dotProduct(Vector3D other) {
         return x * other.getX() + y * other.getY() + z * other.getZ();
+    }
+
+    // Question 9
+    public double angleBetween(Vector3D other) {
+        if (getMagnitude() == 0 || other.getMagnitude() == 0) {
+            throw new IllegalStateException();
+        } else {
+            return Math.toDegrees(Math.acos(dotProduct(other) / (getMagnitude() * other.getMagnitude())));
+        }
     }
 
     // Question 3
