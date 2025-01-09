@@ -17,6 +17,9 @@ public class Main {
 
         // Question 6
         System.out.println(vector.add(vector));
+
+        // Question 7
+        System.out.println(vector.multiply(2));
     }
 }
 
@@ -63,6 +66,11 @@ class Vector3D {
     // Question 6
     public Vector3D add(Vector3D other) {
         return new Vector3D(x + other.getX(), y + other.getY(), z + other.getZ());
+    }
+
+    // Question 7
+    public Vector3D multiply(double scalar) {
+        return new Vector3D(x * scalar, y * scalar, z * scalar);
     }
 
     // Question 3
