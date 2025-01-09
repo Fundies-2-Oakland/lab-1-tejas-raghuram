@@ -11,6 +11,9 @@ public class Main {
 
         // Question 4
         System.out.println(vector.getMagnitude());
+
+        // Question 5
+        System.out.println(vector.normalize());
     }
 }
 
@@ -43,6 +46,15 @@ class Vector3D {
     // Question 4
     public double getMagnitude() {
         return Math.sqrt(x * x + y * y + z * z);
+    }
+
+    // Question 5
+    public Vector3D normalize() {
+        if (getMagnitude() == 0) {
+            throw new IllegalStateException();
+        } else {
+            return new Vector3D(x / getMagnitude(), y / getMagnitude(), z / getMagnitude());
+        }
     }
 
     // Question 3
